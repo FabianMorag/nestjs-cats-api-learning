@@ -47,7 +47,7 @@ export class AuthService {
     const isInvalid = compareSync(password, user.password)
     if (!isInvalid) throw new ConflictException('Invalid credentials')
 
-    const payload = { id: user.id, name: user.name, email: user.email }
+    const payload = { sub: user.id, name: user.name, email: user.email }
     const accessToken = this.jwtService.sign(payload)
 
     return res

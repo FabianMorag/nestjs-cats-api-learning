@@ -7,7 +7,7 @@ import {
 import { Observable } from 'rxjs'
 import { JwtService } from '@nestjs/jwt'
 import { Request } from 'express'
-import { jwtConstants } from '../../contants'
+import { jwtConstants } from 'src/routes/auth/contants'
 
 interface RequestWithUser extends Request {
   user: {
